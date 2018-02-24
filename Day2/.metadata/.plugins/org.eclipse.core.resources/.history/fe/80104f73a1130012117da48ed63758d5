@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE faces-config PUBLIC
+  "-//Sun Microsystems, Inc.//DTD JavaServer Faces Config 1.1//EN"
+  "http://java.sun.com/dtd/web-facesconfig_1_1.dtd">
+
+<faces-config>
+	<lifecycle>	
+		<phase-listener>com.cts.login.AjaxPhaseListener</phase-listener>
+	</lifecycle>
+	<managed-bean>
+		<managed-bean-name>SimpleLogin</managed-bean-name>
+		<managed-bean-class>com.cts.login.SimpleLogin</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	<navigation-rule>
+		<from-view-id>/login.jsp</from-view-id>
+		<navigation-case>
+			<from-action>#{SimpleLogin.CheckValidUser}</from-action>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/resultforsuccess.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{SimpleLogin.CheckValidUser}</from-action>
+			<from-outcome>fail</from-outcome>
+			<to-view-id>/resultforfail.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>newuser</from-outcome>
+			<to-view-id>/persondetails.jsp</to-view-id>
+		</navigation-case>
+
+	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>/resultforfail.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>newuser</from-outcome>
+			<to-view-id>/persondetails.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>back</from-outcome>
+			<to-view-id>/login.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<managed-bean>
+		<managed-bean-name>persondetails</managed-bean-name>
+		<managed-bean-class>com.cts.login.persondetails</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<navigation-rule>
+		<from-view-id>/persondetails.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>result</from-outcome>
+			<to-view-id>/result.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/result.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>details</from-outcome>
+			<to-view-id>/persondetails.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+</faces-config>

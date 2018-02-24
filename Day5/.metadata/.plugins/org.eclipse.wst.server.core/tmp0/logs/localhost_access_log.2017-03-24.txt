@@ -1,0 +1,12 @@
+127.0.0.1 - - [24/Mar/2017:15:08:58 +0530] "GET / HTTP/1.1" 404 1073
+0:0:0:0:0:0:0:1 - - [24/Mar/2017:15:09:00 +0530] "GET /UiComp/ HTTP/1.1" 200 221
+0:0:0:0:0:0:0:1 - - [24/Mar/2017:15:09:00 +0530] "GET /favicon.ico HTTP/1.1" 404 1084
+0:0:0:0:0:0:0:1 - - [24/Mar/2017:15:09:00 +0530] "GET /favicon.ico HTTP/1.1" 404 1084
+0:0:0:0:0:0:0:1 - - [24/Mar/2017:15:09:00 +0530] "GET /UiComp/page1.jsf HTTP/1.1" 200 567
+0:0:0:0:0:0:0:1 - - [24/Mar/2017:15:09:00 +0530] "GET /UiComp/RES_NOT_FOUND HTTP/1.1" 404 1093
+127.0.0.1 - - [24/Mar/2017:15:09:38 +0530] "GET / HTTP/1.1" 404 1073
+0:0:0:0:0:0:0:1 - - [24/Mar/2017:15:09:39 +0530] "GET /JSFFaceletsTutorial/ HTTP/1.1" 200 2107
+0:0:0:0:0:0:0:1 - - [24/Mar/2017:15:09:39 +0530] "GET /favicon.ico HTTP/1.1" 404 1084
+0:0:0:0:0:0:0:1 - - [24/Mar/2017:15:09:39 +0530] "GET /favicon.ico HTTP/1.1" 404 1084
+0:0:0:0:0:0:0:1 - - [24/Mar/2017:15:09:42 +0530] "POST /JSFFaceletsTutorial/faces/login.xhtml;jsessionid=276E76314EC1969C5CC7DA64261DB774 HTTP/1.1" 500 497
+0:0:0:0:0:0:0:1 - - [24/Mar/2017:15:09:47 +0530] "POST /JSFFaceletsTutorial/faces/login.xhtml;jsessionid=276E76314EC1969C5CC7DA64261DB774 HTTP/1.1" 500 497

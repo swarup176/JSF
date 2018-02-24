@@ -1,0 +1,5 @@
+127.0.0.1 - - [24/Mar/2017:14:15:21 +0530] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [24/Mar/2017:14:16:18 +0530] "GET /ManageBeanExample2.0/ HTTP/1.1" 200 921
+0:0:0:0:0:0:0:1 - - [24/Mar/2017:14:16:19 +0530] "GET /favicon.ico HTTP/1.1" 404 973
+0:0:0:0:0:0:0:1 - - [24/Mar/2017:14:16:19 +0530] "GET /favicon.ico HTTP/1.1" 404 973
+0:0:0:0:0:0:0:1 - - [24/Mar/2017:14:16:26 +0530] "POST /ManageBeanExample2.0/faces/index.xhtml;jsessionid=FA7D8617F12B9A7B975238805257BC9A HTTP/1.1" 200 942

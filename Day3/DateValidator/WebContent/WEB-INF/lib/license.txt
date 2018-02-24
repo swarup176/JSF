@@ -1,0 +1,8 @@
+	<module name='sun-jsf'
+		licenseType='cddl'
+		version='1.2_04_P01'
+		projectHome='https://javaserverfaces.dev.java.net/'
+		description='The JSF 1.2 implementation'>
+		<jar name='jsf-api.jar' />
+		<jar name='jsf-impl.jar' />
+	</module>

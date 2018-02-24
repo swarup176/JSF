@@ -1,0 +1,68 @@
+package com.cts.login;
+
+
+
+
+import java.io.IOException;
+import java.io.StringWriter;
+
+import javax.faces.context.FacesContext;
+import javax.faces.event.PhaseEvent;
+import javax.faces.event.PhaseId;
+import javax.faces.event.PhaseListener;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class AjaxPhaseListener implements PhaseListener{
+	public void afterPhase(PhaseEvent event) {
+		// TODO Auto-generated method stub
+		String viewId = event.getFacesContext().getViewRoot().getViewId();
+		if (viewId.indexOf("Ajax") != -1) {
+			 handleAjaxRequest(event);
+		}
+	}
+
+	private void handleAjaxRequest(PhaseEvent event) {
+		FacesContext context = event.getFacesContext();
+		HttpServletResponse response = (HttpServletResponse) context.getExternalContext().getResponse();
+		Object object = context.getExternalContext().getRequest();
+		if (!(object instanceof HttpServletRequest)) {
+			return;
+		}
+
+		HttpServletRequest request = (HttpServletRequest)object;
+		JSONArray arr = new JSONArray();
+		arr.add("Response1");
+		arr.add("Response2");
+		arr.add("Response3");
+
+		//preparation for response using json array
+		StringWriter out = new StringWriter();
+		try {
+			arr.writeJSONString(out);
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		String jsonText = out.toString();
+
+		try {
+			response.setHeader("Cache-control", "no-cache");
+			response.getWriter().write(jsonText);
+			event.getFacesContext().responseComplete();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void beforePhase(PhaseEvent arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public PhaseId getPhaseId() {
+		// TODO Auto-generated method stub
+		return PhaseId.RESTORE_VIEW;
+	}
+
+}

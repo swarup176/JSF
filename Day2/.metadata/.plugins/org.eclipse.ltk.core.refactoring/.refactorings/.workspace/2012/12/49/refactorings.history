@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;Conditionalnavigation&apos;" deleteContents="true" description="Delete resource &apos;Conditionalnavigation&apos;" element1="/Conditionalnavigation" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1354618431619"/>&#x0A;<refactoring comment="Delete resource &apos;JSFMessage&apos;" deleteContents="true" description="Delete resource &apos;JSFMessage&apos;" element1="/JSFMessage" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1354618634246"/>
+</session>

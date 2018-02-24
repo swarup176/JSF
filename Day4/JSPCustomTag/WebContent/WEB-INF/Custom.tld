@@ -1,0 +1,16 @@
+<taglib>
+<tlib-version>1.0</tlib-version>
+<jsp-version>1.2</jsp-version>
+<short-name>Custom Info</short-name>
+<uri>/Custom.tld</uri>
+<description>
+Developing First Custom Tags
+</description>
+
+<tag>
+<name>CustomTag</name>
+
+<tag-class>com.cts.taghandler.CustomTag</tag-class>
+<body-content></body-content>
+</tag>
+</taglib>
